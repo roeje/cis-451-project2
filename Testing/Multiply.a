@@ -21,7 +21,7 @@ TOP:	add  $18, $18, $17      # i4  $18 += $17
 	addi $16, $16, -1       # i5  $16--
 	# Once the first multipler reaches 0, we're done.
 	beq  $16, $0, END       # i6
-	#j    TOP      		# i7
+	j    TOP      		# i7
 
 # We're done.  The extra lines are just to make sure the final jump
 # goes to the right place.
