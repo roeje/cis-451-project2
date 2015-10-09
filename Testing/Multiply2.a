@@ -1,0 +1,10 @@
+lui $16, 50
+lui $17, 2
+
+TOP: 	addi $16, $16, -1
+		addi $17, $17, 1
+		beq	$16, $0, END
+		j	TOP
+		
+END:
+	add $24, $16, $17
