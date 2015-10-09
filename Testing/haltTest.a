@@ -1,0 +1,14 @@
+.data
+val1:	1983
+val2:	2007
+
+	.text
+
+	# Remember, this is a pseudo instruction!
+	lw $16, val1
+	lw $17, val2
+	ori $19, $16, 15
+	lui $20, 75
+	halt
+	addi $16, $16, 17	
+	sw   $16, val2
