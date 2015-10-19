@@ -1,8 +1,9 @@
-jal TARGET
-addi $3, $3, 2
+jal TOP
+addi $t0, $t0, 5
 j END
 
-TARGET:
-	addi $4,$4, 5
-	jr $31
+TOP:
+	addi $t1,$t1, 10
+	jr $ra
+
 END:

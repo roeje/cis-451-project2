@@ -1,17 +1,17 @@
-li $10, 0xF9023224 #large negative
-li $11, 0x78393933 #large positive
-li $12, 0xFFFFFFF2 #small negative
-li $13, 0x43	   #small positive
+li $t2, -20000 #large negative
+li $t3, 50000 #large positive
+li $t4, -2 #small negative
+li $t5, 5	   #small positive
 
-sltu $14, $10, $11
-sltu $15, $11, $10
-sltu $16, $10, $12
-sltu $17, $12, $10
-sltu $18, $10, $13
-sltu $19, $13, $10
-sltu $20, $11, $12
-sltu $21, $12, $11
-sltu $22, $11, $13
-sltu $23, $13, $10
-sltu $24, $12, $13
-sltu $25, $13, $12
+sltu $t6, $t2, $t3
+sltu $t7, $t3, $t2
+sltu $s0, $t2, $t4
+sltu $s1, $t4, $t2
+sltu $s2, $t2, $t5
+sltu $s3, $t5, $t2
+sltu $s4, $t3, $t4
+sltu $s5, $t4, $t3
+sltu $s6, $t3, $t5
+sltu $s7, $t5, $t2
+sltu $t8, $t4, $t5
+sltu $t9, $t5, $t4

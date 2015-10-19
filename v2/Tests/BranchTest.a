@@ -1,0 +1,21 @@
+lui $16, 2
+lui $17, 2
+li $18, 5
+li $19, 0
+
+TOP:	
+
+beq $16, $17, END
+j TOP
+
+END:
+	add $18, $16, $17
+
+
+TOP2: 
+	addi $19, $19, 1
+	bne $18, $19, TOP2
+	jal END2
+
+END2:
+	add $20, $ra, $0
