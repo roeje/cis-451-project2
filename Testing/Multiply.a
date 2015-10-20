@@ -23,6 +23,10 @@ TOP:	add  $18, $18, $17      # i4  $18 += $17
 	beq  $16, $0, END       # i6
 	j    TOP      		# i7
 
+TOP2: add
+
+
+
 # We're done.  The extra lines are just to make sure the final jump
 # goes to the right place.
 END:   addi $19, $19, 70	# i8

@@ -1,7 +1,7 @@
-li $t2, -20000 #large negative
-li $t3, 50000 #large positive
-li $t4, -2 #small negative
-li $t5, 5	   #small positive
+li $t2, -20000 
+li $t3, 50000 
+li $t4, -2 
+li $t5, 5	   
 
 sltu $t6, $t2, $t3
 sltu $t7, $t3, $t2
