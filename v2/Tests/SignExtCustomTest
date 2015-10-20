@@ -1,0 +1,20 @@
+	.data
+ANDi: 0
+ORi: 0
+XORi: 0
+SLTU: 0
+
+	.text
+#test for non sign extend instructions
+li $s1, 15
+li $s0, 0
+li $s2, 4 
+li $s3, 7
+
+andi $t1, $s2, 0xf
+sw $t1, ANDi
+ori  $t0, $s3, 0x0
+sw $t0, ORi
+xori $t2, $s1, 0xf
+sw $t2, XORi
+

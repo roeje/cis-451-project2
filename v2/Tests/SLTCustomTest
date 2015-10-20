@@ -1,0 +1,49 @@
+	.data
+ANDi: 0
+ORi: 0
+XORi: 0
+SLTU: 0
+SLT: 0
+SLTIU: 0
+SLTi: 0
+	.text
+
+#Test Sltu, slt, slti, sltui
+li $t2, -20000 
+li $t3, 50000 
+li $t4, -2 
+li $t5, 5	   
+
+sltu $t6, $t2, $t3
+sltu $t7, $t3, $t2
+add $t6, $t6, $t7
+sw $t6, SLTU
+sltu $s0, $t2, $t4
+sltu $s1, $t4, $t2
+sltu $s2, $t5, $t2
+
+
+slt $t6, $t2, $t2
+slt $t7, $t2, $t4
+add $t6, $t6, $t7
+sw $t6, SLT
+slt $s3, $t4, $t2
+slt $s4, $t5, $t3
+slt $s5, $t4, $t3
+
+sltiu $t6, $t2, 0x7FFF
+sltiu $t7, $t3, 0x7902
+add $t6, $t6, $t7
+sw $t6, SLTIU
+sltiu $s6, $t2, 0x43
+sltiu $s7, $t3, 0x0840
+sltiu $t8, $t4, 0x7550
+sltiu $t9, $t5, 0x43
+
+
+slti $t6, $t3, 0x6C39
+slti $t7, $t2, 0xA
+slti $t4, $t5, 0x0FF2
+slti $t5, $t4, 0x79AA
+add $t6, $t6, $t7
+sw $t6, SLTi
